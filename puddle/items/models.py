@@ -22,3 +22,6 @@ class Item(models.Model):
     image = models.ImageField(upload_to='item_images', blank=True, null=True)
     price = models.FloatField()
     is_sold = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
